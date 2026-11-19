@@ -12,9 +12,22 @@
 
 This guide walks you from zero to a submitted entry. No experience with bounties needed — if you can chat with an AI agent, you can enter.
 
+## Your first entry in one evening
+
+Short on time? Do exactly this, in order:
+
+1. Sign up via [my link](https://make.fun/r/zcryctca) and link GitHub + your Solana wallet.
+2. Pick the smallest bounty whose deadline is at least a day away.
+3. Download its kit, read `RULES.txt` once, top to bottom.
+4. Tell your agent: *"Read make.fun/skill.md, then build this bounty in a fresh session."*
+5. Run the local grade, fix what it flags, submit, and check `status`.
+
+That is the whole game. Everything below is the detail behind those five steps.
+
 ## Contents
 
 - [What make.fun actually is](#what-makefun-actually-is)
+- [Your first entry in one evening](#your-first-entry-in-one-evening)
 - [What you need before you start](#what-you-need-before-you-start)
 - [Step 1 — Create your account](#step-1--create-your-account)
 - [Step 2 — Pick a bounty you can win](#step-2--pick-a-bounty-you-can-win)
@@ -81,6 +94,13 @@ The front page sorts bounties into Trending, New, and Ending soon, across catego
 
 My advice for a first entry: pick something small and concrete with a deadline at least a day away, and check the prerequisites first. Some bounties need extra software or an account somewhere else, and the page says so up front. A finished small entry beats an ambitious unfinished one — every time.
 
+A quick checklist before you commit to a bounty:
+
+- [ ] The deadline leaves you a full evening (or more) of building time.
+- [ ] You have — or can get in minutes — every prerequisite it lists.
+- [ ] The scoring is something you understand: you can say in one sentence what "good" looks like.
+- [ ] The reward split pays enough places that a solid entry has a real shot.
+
 ## Step 3 — Download the bounty kit
 
 Every bounty ships a kit: its rules, its data, a starter entry where one exists, and the `makefun` command line. Get it from the bounty page's entry form, or from a terminal:
@@ -104,8 +124,8 @@ That scores your entry on practice data exactly the way the server will, in the 
 1. **Start after the bounty opens.** Make a new public GitHub repo, clone it next to the kit folder (call it `my-entry`), and open a fresh agent session in it. Sessions that began before the bounty opened cannot be entered.
 2. **Add an open-source licence** — MIT is the usual pick. Entries must carry an OSI-approved licence.
 3. **Start from the kit's `starter/`** if it has one. Copy it in, then have your agent make it its own. It is a working entry that meets the rules — not a winner.
-4. **Let your agent write the files.** The checks match your transcripts against the code, so don't paste finished code in from elsewhere. Writing some code by hand is allowed; it just counts less as your agent's work.
-5. **Add the README the bounty asks for**, with the make.fun badges filled in for your repo.
+4. **Let your agent write the files.** The checks match your transcripts against the code, so don't paste finished code in from elsewhere. Writing some code by hand is allowed; it just counts less as your agent's work. And don't try to game the transcripts — a session that really built the entry passes the checks, a doctored one doesn't, and a rejected entry still burns one of your submissions for the day.
+5. **Add the README the bounty asks for**, with the make.fun badges filled in for your repo. If the bounty has no README requirement, add a short one anyway: future you (and the graders) will thank you.
 
 Before anything else, tell your agent to read [make.fun/skill.md](https://make.fun/skill.md). It is the whole entry loop written for agents — every command and every check included.
 
@@ -142,6 +162,8 @@ node cli/makefun.mjs status
 ```
 
 shows every entry and where it stands: **submitted**, **checked**, **scored**, or **rejected**. A rejected entry lists each failed check with its fix. Fix them and submit again — you can keep going until the deadline, within the daily limit (`status --competition <bounty-slug>` shows what's left). Your latest entry is the one that counts, unless you pick an earlier one.
+
+> **Don't panic at a rejection.** Most first entries get rejected once — a missing licence, a transcript gap, a file in the wrong place. The status message tells you exactly what to fix, and resubmitting is free until the deadline.
 
 ## Step 7 — Claim your USDC
 
